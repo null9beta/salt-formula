@@ -71,6 +71,23 @@ salt:
         spam: sausage
         cheese: bread
 
+    # custom grains config
+    grains:
+      - type: plain
+        key: users
+        val: dev
+      - type: simple_array
+        key: roles
+        val:
+         - foo
+         - bar
+      - type: 2_dim_array
+        key: test
+        val:
+          key1: value1
+          key2: value2
+
+
     # salt mine setup
     mine_interval: 60
     # mine_functions can be set at the top level of the pillar, and
